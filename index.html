@@ -1,12 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>News Hunt</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
+
 <body>
-  <h1>Hello world!</h1>
+  <!-- header section -->
+    <section class="container">
+  <header >
+      <nav class="navbar navbar-expand-lg  ">
+        <div class="container-fluid">
+          <a class="navbar-brand fs-1 fw-bolder" href="#"><span class="text-white bg-primary p-1 rounded-3">News</span>Hunt</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse fw-bold " id="navbarNavAltMarkup">
+            <div class="navbar-nav fs-5 ms-5 ps-5 ">
+              <a class="nav-link active text-primary me-5" aria-current="page" href="#">Home</a>
+              <a class="nav-link text-primary" href="#">Features</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <hr>
+    </section>
+    <main class="container">
+
+      <section>
+        <div id="news_category" class="row row-cols-4 row-cols-lg-6 my-5">
+          <div onclick="showNews()" class="col pb-3">
+            <h5>Home</h5>
+          </div>
+        
+        </div>
+      </section>
+      
+      <section>
+        <div class="input-group mb-3 ">
+          <input type="text" class="form-control" aria-label="Text input with dropdown button" disabled>
+        </div>
+      </section>
+
+      <section id="news-list">
+        
+      </section>
+
+    </main>
+  </header>
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+    <script src="js/news.js"></script>
 </body>
+
 </html>
