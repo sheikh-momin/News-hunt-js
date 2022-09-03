@@ -34,7 +34,7 @@
 
       <section>
         <div id="news_category" class="row row-cols-4 row-cols-lg-6 my-5">
-          <div onclick="showNews()" class="col pb-3">
+          <div class="col pb-3">
             <p>Home</p>
           </div>
         
@@ -43,8 +43,29 @@
       
       <section>
         <div class="input-group mb-3 ">
-          <input type="text" class="form-control" aria-label="Text input with dropdown button" disabled>
+          <input type="text" id="news-number" class="form-control" aria-label="Text input with dropdown button" disabled>
         </div>
+      </section>
+        
+      <section>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="modal-details" class="modal-body">
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
       </section>
 
       <section id="news-list">
