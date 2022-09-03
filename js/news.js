@@ -81,8 +81,6 @@ const modalNews = (news_id) => {
     <P>${news_id.rating.number ? news_id.rating.number : 'No rating'}M</P>
     </div>
   `
-  
-      
 }
 
 // loading
