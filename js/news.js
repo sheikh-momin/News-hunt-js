@@ -22,7 +22,6 @@ const showNews = (category_id )=>{
     .then(data => categoriesNews(data.data))
   }
 const categoriesNews = (newsId) => {
-  console.log(newsId)
   const newsList = document.getElementById('news-list')
   newsList.innerHTML = ''
   const newsNumber = document.getElementById('news-number')
