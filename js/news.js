@@ -22,13 +22,16 @@ const showNews = (category_id )=>{
     .then(data => categoriesNews(data.data))
   }
 const categoriesNews = (newsId) => {
+  console.log(newsId)
+  const sortedResponse = newsId.sort((a, b) => b.total_view - a.total_view);
+  console.log(sortedResponse)
   const newsList = document.getElementById('news-list')
   newsList.innerHTML = ''
   const newsNumber = document.getElementById('news-number')
   newsNumber.value = ''
   newsNumber.value=`${newsId.length} news found `
   if(newsId.length!==0){
-    newsId.forEach(news => {
+    sortedResponse.forEach(news => {
       const div = document.createElement('div')
       div.classList.add('card', 'mb-3')
       div.innerHTML = `<div  class="row g-0">
@@ -42,7 +45,9 @@ const categoriesNews = (newsId) => {
                 <div class="d-flex justify-content-between align-items-center">
                 <div><image style="width: 50px;" class="img-fluid rounded-5"  src="${news.author.img ? news.author.img : 'No image found'}">
                 <h5 class="d-inline-block">${news.author.name ? news.author.name : 'No name found'}</h5></div>
-                <P>${news.rating.number ? news.rating.number : 'No rating'}M</P>
+                <P>${news.rating.number ? news.rating.number+'M' : 'No rating'}</P>
+                <P>${news.total_view ? news.total_view+'K' : 'No watch'}</P>
+                </div>
                 </div>
                 <button onclick="showDetailsNews('${news._id}')" type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
           Show Details
@@ -78,6 +83,8 @@ const modalNews = (news_id) => {
     <div><image style="width: 50px;" class="img-fluid rounded-5"  src="${news_id.author.img ? news_id.author.img : 'No image found'}">
     <h5 class="d-inline-block">${news_id.author.name ? news_id.author.name : 'No name found'}</h5></div>
     <P>${news_id.rating.number ? news_id.rating.number : 'No rating'}M</P>
+    <P>${news_id.total_view ? news_id.total_view : 'No views'}K</P>
+
     </div>
   `
 }
