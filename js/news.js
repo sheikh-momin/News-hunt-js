@@ -11,7 +11,7 @@
     newses.forEach(news => {
       const div = document.createElement('div')
       div.classList.add('d-inline-block','pb-3','pe-4')
-      div.innerHTML = `<a  onclick="showNews(${news.category_id})">${news.category_name}</a>`;
+      div.innerHTML = `<a class="btn btn-light" onclick="showNews(${news.category_id})">${news.category_name}</a>`;
       newsCategory.appendChild(div)
     });
   }
