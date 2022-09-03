@@ -32,7 +32,7 @@ const categoriesNews = (newsId) => {
     sortedResponse.forEach(news => {
       const div = document.createElement('div')
       div.classList.add('card', 'mb-3')
-      div.innerHTML = `<div  class="row g-0">
+      div.innerHTML = `<div  class="row g-0 py-2">
             <div class="col-md-4">
               <img src="${news.image_url ? news.image_url : 'No image found'}" class="img-fluid rounded-start" alt="...">
             </div>
@@ -47,7 +47,7 @@ const categoriesNews = (newsId) => {
                 <P>${news.total_view ? news.total_view+'K' : 'No watch'}</P>
                 </div>
                 </div>
-                <button onclick="showDetailsNews('${news._id}')" type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button onclick="showDetailsNews('${news._id}')" type="button" class="btn btn-primary mt-2 ms-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
           Show Details
         </button>
               </div>
